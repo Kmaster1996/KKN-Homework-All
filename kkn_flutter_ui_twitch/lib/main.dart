@@ -152,40 +152,73 @@ class Twitch extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Container(
-                                color: Color.fromARGB(255, 233, 128, 80),
-                                width: 80,
-                                height: 100,
-                                child: Center(
-                                  child: Text('Live1'),
+                      Column(
+                        children: <Widget>[
+                          Container(
+                            height: 100,
+                            width: 320,
+                            child: ListView(scrollDirection: Axis.horizontal,
+                              children: <Widget>[
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                    color: Color.fromARGB(255, 233, 128, 80),
+                                    child: Center(child: Text('Live1')),
+                                  ),
                                 ),
-                              ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                    color: Color.fromARGB(255, 161, 104, 28),
+                                    child: Center(child: Text('Live2')),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 92, 81, 52),
+                                      child: Center(child: Text('Live3'))),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 228, 226, 222),
+                                      child: Center(child: Text('Live4'))),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 92, 81, 52),
+                                      child: Center(child: Text('Live5'))),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 92, 81, 52),
+                                      child: Center(child: Text('Live6'))),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 179, 110, 121),
+                                      child: Center(child: Text('Live7'))),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 182, 152, 223),
+                                      child: Center(child: Text('Live8'))),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: Container(
+                                      color: Color.fromARGB(255, 124, 192, 144),
+                                      child: Center(child: Text('Live9'))),
+                                ),
+                              ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Container(
-                                color: Color.fromARGB(255, 161, 104, 28),
-                                width: 80,
-                                height: 100,
-                                child: Center(child: Text('Live2')),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Container(
-                                  color: Color.fromARGB(255, 92, 81, 52),
-                                  width: 80,
-                                  height: 100,
-                                  child: Center(child: Text('Live3'))),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: const EdgeInsets.all(12.0),
@@ -223,7 +256,8 @@ class Twitch extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10.0),
-                              color: Color.fromARGB(255, 159, 231, 140),),
+                                color: Color.fromARGB(255, 159, 231, 140),
+                              ),
                               width: 80,
                               height: 100,
                               child: Center(
@@ -236,7 +270,8 @@ class Twitch extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10.0),
-                                color: Color.fromARGB(255, 175, 175, 83),),
+                                color: Color.fromARGB(255, 175, 175, 83),
+                              ),
                               width: 80,
                               height: 100,
                               child: Center(
