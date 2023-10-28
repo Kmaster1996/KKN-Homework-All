@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,6 +35,7 @@ class Twitch extends StatelessWidget {
                               'Browse   :',
                               style: TextStyle(
                                   fontSize: 20,
+                                  fontWeight: FontWeight.bold,
                                   color: Color.fromARGB(255, 255, 255, 255)),
                             ),
                           ),
@@ -42,31 +45,42 @@ class Twitch extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        height: 20,
-                        width: 150,
-                        color: const Color.fromARGB(255, 99, 98, 97),
-                        child: Center(child: Text('Search')),
-                      ),
+                          height: 30,
+                          width: 120,
+                          color: const Color.fromARGB(255, 99, 98, 97),
+                          child: TextField(
+                            decoration: InputDecoration(labelText: 'Search'),
+                          )),
                     ),
-                    Container(
-                      height: 20,
-                      width: 60,
-                      color: Color.fromARGB(255, 61, 61, 60),
-                      child: Center(
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              const Color.fromARGB(255, 116, 115, 114)),
+                        ),
+                        onPressed: null,
                         child: Text(
                           'Log in',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        child: Center(child: Text('Sign Up')),
-                        height: 20,
-                        width: 60,
-                        color: Color.fromARGB(255, 235, 114, 194),
-                      ),
+                      padding: const EdgeInsets.all(2.0),
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromARGB(255, 190, 107, 179)),
+                          ),
+                          onPressed: null,
+                          child: Text(
+                            'Sign Up',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          )),
                     ),
                   ],
                 ),
@@ -76,37 +90,46 @@ class Twitch extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     color: Color.fromARGB(255, 61, 61, 61),
-                    height: 550,
+                    height: 520,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(
-                          'Recommend Channel',
-                          style: TextStyle(
-                            color: Colors.white
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            'Recommend',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                        Text(
-                          'Takluz',
-                          style: TextStyle(
-                            color: Colors.white
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            ': Takluz',
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                        Text(
-                          'DippoX',
-                          style: TextStyle(
-                            color: Colors.white
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            ': DippoX',
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                        Text(
-                          'SK',
-                          style: TextStyle(
-                            color: Colors.white
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            ': SK',
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                        Text(
-                          'KKN',
-                          style: TextStyle(
-                            color: Colors.white
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            ': KKN',
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ],
@@ -121,6 +144,7 @@ class Twitch extends StatelessWidget {
                             Text(
                               'Recomend weekly',
                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
                                 color: Color.fromARGB(255, 70, 2, 49),
                                 fontSize: 20,
                               ),
@@ -170,6 +194,7 @@ class Twitch extends StatelessWidget {
                             Text(
                               'Minecraft for today',
                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
                                 color: Color.fromARGB(255, 114, 10, 128),
                                 fontSize: 20,
                               ),
@@ -182,7 +207,10 @@ class Twitch extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(2.0),
                             child: Container(
-                              color: Color.fromARGB(255, 53, 186, 219),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                color: Color.fromARGB(255, 53, 186, 219),
+                              ),
                               width: 80,
                               height: 100,
                               child: Center(
@@ -193,7 +221,9 @@ class Twitch extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(2.0),
                             child: Container(
-                              color: Color.fromARGB(255, 159, 231, 140),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                              color: Color.fromARGB(255, 159, 231, 140),),
                               width: 80,
                               height: 100,
                               child: Center(
@@ -204,7 +234,9 @@ class Twitch extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(2.0),
                             child: Container(
-                              color: Color.fromARGB(255, 175, 175, 83),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                color: Color.fromARGB(255, 175, 175, 83),),
                               width: 80,
                               height: 100,
                               child: Center(
@@ -221,6 +253,7 @@ class Twitch extends StatelessWidget {
                             Text(
                               'Special Hot!!',
                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
                                 color: const Color.fromARGB(255, 146, 7, 7),
                                 fontSize: 20,
                               ),
@@ -317,50 +350,54 @@ class Twitch extends StatelessWidget {
                   ),
                 ],
               ),
-              Expanded(
-                child: Container(
-                  color: Color.fromARGB(255, 116, 46, 148),
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        height: 30,
-                        width: 300,
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Center(
-                                child: Text(
-                                  'Join the Twitch community!',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        color: Colors.white,
-                        height: 25,
-                        width: 100,
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
+              Container(
+                color: Color.fromARGB(255, 116, 46, 148),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      height: 30,
+                      width: 280,
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Center(
                               child: Text(
-                                'Sign Up NOW',
+                                'Join the Twitch community!',
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 0, 0, 0),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all(EdgeInsets.all(1.5)),
+                        minimumSize: MaterialStateProperty.all(Size(10, 20)),
+                        backgroundColor: MaterialStateProperty.all(
+                            Color.fromARGB(255, 255, 255, 255)),
+                      ),
+                      onPressed: null,
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Text(
+                              'Sign Up NOW',
+                              style: TextStyle(
+                                color: const Color.fromARGB(255, 0, 0, 0),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
