@@ -12,8 +12,12 @@ class Docker extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('Docker'),
+          backgroundColor: Color.fromARGB(255, 158, 220, 228),
+          title: Center(
+              child: const Text(
+            'Docking',
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          )),
         ),
         body: Container(
           color: Color.fromARGB(255, 209, 213, 214),
@@ -31,47 +35,64 @@ class Docker extends StatelessWidget {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   //Menu and option
                   Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Container(
                       color: Color.fromARGB(255, 153, 210, 228),
-                      width: 230,
+                      width: 220,
                       height: 30,
-                      child: Row(
+                      child: ListView(scrollDirection: Axis.horizontal,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Text('Product'),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Text('Developer'),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Text('Procing'),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Text('Blog'),
-                          ),
+                            ),
                         ],
                       ),
                     ),
                   ),
                   Container(
-                    color: const Color.fromARGB(255, 30, 135, 233),
                     width: 130,
-                    height: 30,
-                    child: Row(
+                    height: 40,
+                    child: ListView(scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text('Sign in'),
+                          padding: const EdgeInsets.all(4.0),
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(255, 40, 108, 235)),
+                              ),
+                              onPressed: null,
+                          child: Text('Sign in')
+                          ),
                         ),
-                        Text('Get Stared'),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(255, 40, 108, 235)),
+                              ),
+                              onPressed: null,
+                          child: Text('Get Stared'),
+                          ),
+                        ),
                       ],
                     ),
                   )
@@ -84,8 +105,8 @@ class Docker extends StatelessWidget {
                     child: Center(
                       child: Column(
                         children: [
-                          Text('Pricing & Subscriptions'),
-                          Text('Choose one that right for you.'),
+                          Center(child: Text('Pricing & Subscriptions')),
+                          Center(child: Text('Choose one that right for you.')),
                         ],
                       ),
                     ),
@@ -93,6 +114,7 @@ class Docker extends StatelessWidget {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   //Price
                   Padding(
@@ -101,7 +123,7 @@ class Docker extends StatelessWidget {
                         color: Color.fromARGB(255, 151, 186, 231),
                         height: 400,
                         width: 80,
-                        child: Text('Price1')),
+                        child: Center(child: Text('Price1'))),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -109,7 +131,7 @@ class Docker extends StatelessWidget {
                         color: Color.fromARGB(255, 151, 186, 231),
                         height: 400,
                         width: 80,
-                        child: Text('Price2')),
+                        child: Center(child: Text('Price2'))),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -117,7 +139,7 @@ class Docker extends StatelessWidget {
                         color: Color.fromARGB(255, 151, 186, 231),
                         height: 400,
                         width: 80,
-                        child: Text('Price3')),
+                        child: Center(child: Text('Price3'))),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -125,7 +147,7 @@ class Docker extends StatelessWidget {
                         color: Color.fromARGB(255, 151, 186, 231),
                         height: 400,
                         width: 80,
-                        child: Text('Price4')),
+                        child: Center(child: Text('Price4'))),
                   ),
                 ],
               )
