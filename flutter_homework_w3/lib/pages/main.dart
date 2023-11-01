@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_homework_w3/pages/secord.dart';
 
 void main() {
-  runApp(const Netflix());
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+        home: new NF_Home());
+  }
 }
 
-class Netflix extends StatelessWidget {
-  const Netflix({super.key});
+
+class NF_Home extends StatelessWidget {
+  const NF_Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return new Scaffold(
         body: Container(
           color: Color.fromARGB(255, 43, 42, 42),
           child: Column(
@@ -65,7 +73,16 @@ class Netflix extends StatelessWidget {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () => {},
+                      onPressed: () => {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Page2();
+                            },
+                          ),
+                        ),
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                           Color.fromARGB(255, 43, 42, 42),
@@ -133,7 +150,6 @@ class Netflix extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }

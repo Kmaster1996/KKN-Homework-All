@@ -64,6 +64,11 @@ flutter:
       - my_image/BJ.jpg
       - my_image/stt.png
       - my_image/aot.png
+      - my_image/Netflix.png
+      - my_image/movie.jpg
+      - my_image/1.png
+      - my_image/inception.jpg
+      - my_image/india.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
