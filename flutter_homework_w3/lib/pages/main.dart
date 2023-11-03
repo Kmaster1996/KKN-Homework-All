@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class NF_Home extends StatelessWidget {
   const NF_Home({super.key});
 
@@ -44,7 +43,7 @@ class NF_Home extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(40.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     ElevatedButton(
                       onPressed: () => {},
@@ -90,6 +89,19 @@ class NF_Home extends StatelessWidget {
                       ),
                       child: Image.asset(
                         'my_image/stt.png',
+                        width: 180,
+                        height: 180,
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () => {},
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          Color.fromARGB(255, 43, 42, 42),
+                        ),
+                      ),
+                      child: Image.asset(
+                        'my_image/lufy.jpg',
                         width: 180,
                         height: 180,
                       ),
